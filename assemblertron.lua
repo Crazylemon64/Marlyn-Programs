@@ -43,7 +43,7 @@ registerInventories()
 local ok,bad_invs = checkInventories()
 
 if not ok then
-  print("Could not find inventories %s":format(serialization.serialize(bad_invs,true)))
+  print(string.format("Could not find inventories %s", serialization.serialize(bad_invs,true)))
   os.exit()
 end
 print("Inventories found!")
